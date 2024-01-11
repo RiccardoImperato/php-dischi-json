@@ -8,11 +8,68 @@
 
 /*/ Reset */
 
-/* Common */
+/* Typo */
 
-img {
-    display: block;
-    width: 200px;
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
-/*/ Common */
+/*/ Typo */
+
+/* Header */
+
+header {
+    padding: 10px 0;
+    background-color: #06131f;
+}
+
+header img {
+    height: 50px;
+    width: 50px;
+}
+
+/*/ Header */
+
+/* Main */
+
+main {
+    padding: 50px 0;
+    background-color: #1d2d3c;
+}
+
+img {
+    height: 300px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+li {
+    text-align: center;
+    color: #fff;
+    padding: 35px;
+    width: calc((100% - 40px) / 3);
+    background-color: #112030;
+    border-radius: 5px;
+}
+
+.info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*/ Main */
