@@ -15,6 +15,7 @@
     <div id="app">
         <ul>
             <li v-for="album in albums">
+                <img :src="album.image" :alt="album.title">
                 <h3>{{ album.title }}</h3>
                 <div>{{ album.artist }}</div>
                 <div>{{ album.year }}</div>
