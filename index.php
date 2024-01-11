@@ -11,13 +11,25 @@
 </head>
 
 <body>
-
+    <h1>Albums</h1>
+    <div id="app">
+        <ul>
+            <li v-for="album in albums">
+                <h3>{{ album.title }}</h3>
+                <div>{{ album.artist }}</div>
+                <div>{{ album.year }}</div>
+            </li>
+        </ul>
+    </div>
     <!-- Vue js -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!--/ Vue js -->
     <!-- Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!--/ Axios -->
+    <!-- My script -->
+    <script src="./js/index.js"></script>
+    <!--/ My script -->
 </body>
 
 </html>
