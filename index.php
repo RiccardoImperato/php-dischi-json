@@ -25,15 +25,23 @@
         <div id="app">
             <div class="container">
                 <ul>
-                    <li v-for="album in albums">
+                    <li v-for="(album, index) in albums" class="card">
                         <img :src="album.image" :alt="album.title">
-                        <div class="info">
-                            <h3>{{ album.title }}</h3>
-                            <div>{{ album.artist }}</div>
-                            <div>{{ album.year }}</div>
-                        </div>
+                        <h3 id="title">{{ album.title }}</h3>
+                        <button @click="viewAlbum(index)">Details</button>
                     </li>
                 </ul>
+                <div v-if="currentAlbum" class="modal">
+                    <div class="modal-card">
+                        <img :src="currentAlbum.image" :alt="currentAlbum.title">
+                        <div class="info">
+                            <h3>{{ currentAlbum.title }}</h3>
+                            <div>{{ currentAlbum.artist }}</div>
+                            <div>{{ currentAlbum.year }}</div>
+                            <button @click="closeAlbum">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
